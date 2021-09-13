@@ -9,13 +9,17 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
     const username = req.body.username;
-    const description = req.body.description;
+    const title = req.body.title;
+    const ingredients = req.body.ingredients;
+    const prep = req.body.prep;
     const duration = Number(req.body.duration);
     const date = Date.parse(req.body.date)
 
     const newRecipe = new Recipe({
         username,
-        description,
+        title,
+        ingredients,
+        prep,
         duration,
         date,
     })
@@ -41,7 +45,9 @@ router.route('/update/:id').post((req, res) => {
     Recipe.findById(req.params.id)
         .then(recipe => {
             recipe.username = req.body.username;
-            recipe.description = req.body.description;
+            recipe.title = req.body.title;
+            recipe.ingredients = req.body.ingredients;
+            recipe.prep = req.body.prep;
             recipe.duration = Number(req.body.duration);
             recipe.date = Date.parse(req.body.date)
 

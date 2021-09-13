@@ -6,7 +6,9 @@ import axios from 'axios';
 const Recipe = props => (
     <tr>
         <td>{props.recipe.username}</td>
-        <td>{props.recipe.description}</td>
+        <td>{props.recipe.title}</td>
+        <td>{props.recipe.ingredients}</td>
+        <td>{props.recipe.prep}</td>
         <td>{props.recipe.duration}</td>
         <td>{props.recipe.date.substring(0, 10)}</td>
         <td>
@@ -32,11 +34,12 @@ export default class RecipesList extends Component {
             })
             .catch((error) => {
                 console.log(error);
+                alert(error)
             })
     }
 
     deleteRecipe(id) {
-        axios.delete('http://localhost:500/recipes/' + id)
+        axios.delete('http://localhost:5000/recipes/' + id)
             .then(res => console.log(res.data))
 
         this.setState({
@@ -53,15 +56,17 @@ export default class RecipesList extends Component {
     render() {
         return (
             <div>
-                <h3>Logged Exercises</h3>
+                <h3>Retete</h3>
                 <table className="table">
                     <thead className="thead-light">
                         <tr>
                             <th>Username</th>
-                            <th>Description</th>
-                            <th>Duration</th>
-                            <th>Date</th>
-                            <th>Actions</th>
+                            <th>Titlul retetei</th>
+                            <th>Ingrediente</th>
+                            <th>Mod de preparare</th>
+                            <th>Timp:</th>
+                            <th>Data</th>
+                            <th>Actiuni</th>
                         </tr>
                     </thead>
                     <tbody>

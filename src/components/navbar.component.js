@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "../App.css"
 
 
 export default class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+            <nav className="navbar navbar-dark  navbar-expand-lg">
                 <Link to='/' className='navbar-brand'>Cookmania</Link>
                 <div className='collapse navbar-collapse'>
                     <ul className='navbar-nav mr-auto'>

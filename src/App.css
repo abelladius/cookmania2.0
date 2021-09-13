@@ -1,38 +1,44 @@
-.App {
+* {
+  font-family: "PT Sans", sans-serif;
+}
+
+.form-group > label {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  
+}
+
+.form-group > .btn {
+  height: 80px;
+  width: 30vw;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 35%;
+  margin-right: 35%;
+  
+}
+
+
+
+h3{
+  font-size: 50px;
   text-align: center;
+  padding-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  background-color: #9151a8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.navbar-brand{
+  margin: 0 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-item{
+  margin: 0 50px;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
